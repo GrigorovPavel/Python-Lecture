@@ -90,8 +90,8 @@ res_lst3 = [(i, i**2) for i in lst if i % 2 == 0]
 print(res_lst3)
 
 # Решение через lamda функцию (для общего понимания)
-def select(func, val):
-    return [func(x) for x in val]
+def select(func, val): # Расписаная функция map()  select можно заменить на map()
+    return [func(x) for x in val] # Расписаная функция map()
 
 def where(func, val):
     return [x for x in val if func(x)]
@@ -100,6 +100,6 @@ res_lst4 = select(int, lst) # Взяли наш список lst
 print(res_lst4)
 res_lst4 = where(lambda i: i % 2 == 0, res_lst4) # Нашли только четные элементы
 print(res_lst4)
-res_lst4 = list(select(lambda i: (i, i**2), res_lst4)) # Возвели их в степень и вывели картежем
+res_lst4 = list(map(lambda i: (i, i**2), res_lst4)) # Возвели их в степень и вывели картежем
 print(res_lst4)
 
