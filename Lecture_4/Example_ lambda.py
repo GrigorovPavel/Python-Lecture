@@ -93,7 +93,7 @@ print(res_lst3)
 def select(func, val): # Расписаная функция map()  select можно заменить на map()
     return [func(x) for x in val] # Расписаная функция map()
 
-def where(func, val):
+def where(func, val): # Расписаная функция filter()  where можно заменить на filter()
     return [x for x in val if func(x)]
 
 res_lst4 = select(int, lst) # Взяли наш список lst
