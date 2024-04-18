@@ -68,6 +68,7 @@ math4(lambda a, b : a * b, 5, 14)
 # Пример: 1 2 3 5 8 15 23 38
 # Получить: [(2, 4), (8, 64), (38, 1444)]
 
+# Через индекс
 lst = [1, 2, 3, 5,8, 15, 23, 38]
 res_lst = []
 for i in range(len(lst)):
@@ -76,3 +77,14 @@ for i in range(len(lst)):
 
 print(res_lst)
 
+# Через элемент
+res_lst2 = []
+for i in lst:
+    if i % 2 == 0:
+        res_lst2.append((i, i**2))
+
+print(res_lst2)
+
+# Более кратко можно записать так
+res_lst3 = [(i, i**2) for i in lst if i % 2 == 0]
+print(res_lst3)
